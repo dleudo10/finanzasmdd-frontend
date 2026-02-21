@@ -6,7 +6,7 @@ import Label from "../form/Label";
 
 export default function UserInfoCard() {
   const { isOpen, openModal, closeModal } = useModal();
-  const handleSave = () => {
+  const handleSave = () => { 
     // Handle save logic here
     console.log("Saving changes...");
     closeModal();

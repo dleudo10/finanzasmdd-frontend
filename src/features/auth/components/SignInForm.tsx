@@ -12,7 +12,7 @@ import { useAlert } from "@/hooks/useAlert";
 import { createWhatsappUrl, defaultWhatsappMessage } from "@/helpers/contact";
 import Spinner from "@/components/ui/loaders/Spinner";
 
-export default function SignInForm() {
+export default function SignInForm() { 
     const [showPassword, setShowPassword] = useState<boolean>(false);
     const { mutate, isPending } = useLogin();
     const { handleError } = useApiError()
@@ -21,7 +21,7 @@ export default function SignInForm() {
     
     // Formulario
     const { register, handleSubmit, clearErrors, setError, formState: { errors, isSubmitting } } = useForm<LoginPayload>({
-        shouldFocusError: true
+        shouldFocusError: true // Se enfoca automáticamente en el primer campo con error al enviar el formulario
     });
     
 

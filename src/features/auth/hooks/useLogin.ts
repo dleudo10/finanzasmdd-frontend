@@ -16,7 +16,7 @@ export const useLogin = () => {
                 setToken(data.data?.access)
                 const decoded = decodeToken(data.data.access)
                 if (decoded) {
-                    setUser({
+                    setUser({ 
                         tenant: decoded.tenant,
                         name: decoded.name,
                         lastname: decoded.lastname,

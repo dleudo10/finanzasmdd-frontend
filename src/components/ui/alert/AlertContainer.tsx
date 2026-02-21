@@ -19,7 +19,7 @@ export const AlertContainer = () => {
     }, [visibleAlerts, removeAlert]);
 
     return (
-        <div className="fixed right-6 top-6 z-50 flex flex-col gap-3 w-[360px]">
+        <div className="fixed right-6 top-6 z-999999 flex flex-col gap-3 w-[360px]">
             {visibleAlerts.map((alert) => (
                 <Alert
                     key={alert.id}

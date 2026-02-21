@@ -59,6 +59,7 @@ import { ReactComponent as PosIcon } from "./pos.svg?react";
 import { ReactComponent as ClockFadingIcon } from "./clock-fading.svg?react";
 import { ReactComponent as HandbagIcon } from "./handbag.svg?react";
 import { ReactComponent as ContactsIcon } from "./contacts.svg?react";
+import { ReactComponent as PhoneIcon } from "./phone.svg?react";
 
 export {
   ErrorHexaIcon,
@@ -122,4 +123,5 @@ export {
   ClockFadingIcon,
   HandbagIcon,
   ContactsIcon,
+  PhoneIcon
 };
