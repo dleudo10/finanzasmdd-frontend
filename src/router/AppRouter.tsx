@@ -9,10 +9,12 @@ import FullPageLoader from "@/components/ui/loaders/FullPageLoader";
 const SignIn = lazy(() => import("@/features/auth").then(module => ({ default: module.SignIn })))
 const SelectTenant = lazy(() => import("@/features/auth").then(module => ({ default: module.SelectTenant })))
 const Profile = lazy(() => import("@/features/profile").then(module => ({ default: module.Profile })))
+const NotFound = lazy(() => import("@/pages/NotFound"))
 
 // PAGINAS DE PRUEBA
 import UserProfiles from "../pages/UserProfiles";
 import { Roles } from "@/features/roles";
+// import NotFound from "@/pages/NotFound";
 
 const AppRouter = () => {
     return (
@@ -58,11 +60,16 @@ const AppRouter = () => {
                                 <SignIn />
                             </PublicRoute>
                         } />
+
                         <Route path="/select-tenant" element={
                             <PublicRoute>
                                 <SelectTenant />
                             </PublicRoute>
                         } />
+
+                        {/* Page not found */}
+                        <Route path="*" element={<NotFound />} />
+
 
                     </Routes>
                 </Suspense>
