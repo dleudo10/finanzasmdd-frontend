@@ -1,4 +1,3 @@
-import Container from "@/components/common/Container";
 import Skeleton from "@/components/ui/skeleton/Skeleton";
 
 const PlaceholderProfile = () => {
@@ -6,7 +5,7 @@ const PlaceholderProfile = () => {
         <div className="space-y-6">
 
             {/* Meta Card */}
-            <Container>
+            <div className="p-5 border border-gray-200 rounded-2xl dark:border-gray-800 lg:p-6">
                 <div className="flex flex-col gap-5 xl:flex-row xl:items-center xl:justify-between">
                     <div className="flex flex-col items-center w-full gap-6 xl:flex-row">
                         <div className="space-y-3">
@@ -16,9 +15,9 @@ const PlaceholderProfile = () => {
                     </div>
                     <Skeleton className="h-10 w-32 rounded-full" />
                 </div>
-            </Container>
+            </div>
 
-            <Container>
+            <div className="p-5 border border-gray-200 rounded-2xl dark:border-gray-800 lg:p-6">
                 <div className="space-y-6">
                     <Skeleton className="h-5 w-48" />
 
@@ -31,9 +30,9 @@ const PlaceholderProfile = () => {
                         ))}
                     </div>
                 </div>
-            </Container>
+            </div>
 
-            <Container>
+            <div className="p-5 border border-gray-200 rounded-2xl dark:border-gray-800 lg:p-6">
                 <div className="space-y-6">
                     <Skeleton className="h-5 w-40" />
                     <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-7">
@@ -45,7 +44,7 @@ const PlaceholderProfile = () => {
                         ))}
                     </div>
                 </div>
-            </Container>
+            </div>
 
         </div>
     );

@@ -35,16 +35,16 @@ const navItems: NavItem[] = [
         name: "Perfil",
         path: "/profile",
     },
-    {
-        icon: <UserLockIcon />,
-        name: "Roles",
-        path: "/roles",
-    },
-    {
-        icon: <UserIcon />,
-        name: "Empleados",
-        path: "/employees",
-    }
+    // {
+    //     icon: <UserLockIcon />,
+    //     name: "Roles",
+    //     path: "/roles",
+    // },
+    // {
+    //     icon: <UserIcon />,
+    //     name: "Empleados",
+    //     path: "/employees",
+    // }
 ];
 
 const othersItems: NavItem[] = [
@@ -77,14 +77,14 @@ const othersItems: NavItem[] = [
         name: "Compras",
         path: "/charts",
     },
-    {
-        icon: <ContactsIcon />,
-        name: "Contactos",
-        subItems: [
-            { name: "Proveedores", path: "/suppliers", pro: false },
-            { name: "Clientes", path: "/customers", pro: false },
-        ]
-    }
+    // {
+    //     icon: <ContactsIcon />,
+    //     name: "Contactos",
+    //     subItems: [
+    //         { name: "Proveedores", path: "/suppliers", pro: false },
+    //         { name: "Clientes", path: "/customers", pro: false },
+    //     ]
+    // }
 ];
 
 const AppSidebar: React.FC = () => {

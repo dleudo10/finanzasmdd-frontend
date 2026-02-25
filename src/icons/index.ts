@@ -15,6 +15,7 @@ import { ReactComponent as GridIcon } from "./grid.svg?react";
 import { ReactComponent as FileIcon } from "./file.svg?react";
 import { ReactComponent as DownloadIcon } from "./download.svg?react";
 import { ReactComponent as ArrowRightIcon } from "./arrow-right.svg?react";
+import { ReactComponent as ArrowLeftIcon } from "./arrow-left.svg?react"
 import { ReactComponent as GroupIcon } from "./group.svg?react";
 import { ReactComponent as BoxIconLine } from "./box-line.svg?react";
 import { ReactComponent as ShootingStarIcon } from "./shooting-star.svg?react";
@@ -60,6 +61,9 @@ import { ReactComponent as ClockFadingIcon } from "./clock-fading.svg?react";
 import { ReactComponent as HandbagIcon } from "./handbag.svg?react";
 import { ReactComponent as ContactsIcon } from "./contacts.svg?react";
 import { ReactComponent as PhoneIcon } from "./phone.svg?react";
+import { ReactComponent as SearchIcon } from "./search.svg?react";
+import { ReactComponent as InboxIcon } from "./inbox.svg?react";
+import { ReactComponent as RefreshCwIcon } from "./refresh-cw.svg?react";
 
 export {
   ErrorHexaIcon,
@@ -123,5 +127,9 @@ export {
   ClockFadingIcon,
   HandbagIcon,
   ContactsIcon,
-  PhoneIcon
+  PhoneIcon,
+  SearchIcon,
+  ArrowLeftIcon,
+  InboxIcon,
+  RefreshCwIcon,
 };

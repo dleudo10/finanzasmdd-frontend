@@ -97,6 +97,7 @@ const Input: FC<InputProps> = ({
             {hint && (
                 <p
                     id={ariaDescribedby}
+                    role="alert"
                     className={`mt-1.5 text-xs ${error
                         ? "text-error-500"
                         : success

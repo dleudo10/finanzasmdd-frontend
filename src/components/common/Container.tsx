@@ -3,10 +3,10 @@ type ContainerProps = {
     children: React.ReactNode
 }
 
-const Container = ({ children }: ContainerProps) => {
+const Container = (props: ContainerProps) => {
     return (
-        <div className="p-5 border border-gray-200 rounded-2xl dark:border-gray-800 lg:p-6">
-            {children}
+        <div className={`rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03] ${props.className}`}>
+            {props.children}
         </div>
     )
 }

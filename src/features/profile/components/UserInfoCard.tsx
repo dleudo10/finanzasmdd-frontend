@@ -1,4 +1,3 @@
-import Container from "@/components/common/Container";
 import { useModal } from "@/hooks/useModal";
 import { FormUserInfo, UserInfoCardProps } from "../profile.types";
 import capitalizeFirstLetter from "@/helpers/capitalizeFirstLetter";
@@ -67,8 +66,6 @@ const UserInfoCard = (props: UserInfoCardProps) => {
             onError: (error) => {
                 const apiError = handleError(error)
 
-                console.log(apiError)
-
                 if (apiError.errorType === "HTTP_ERROR" && apiError.errors) {
                     Object.entries(apiError.errors).forEach(([field, messages]) => {
                         if (field !== 'non_field_errors' && field !== 'detail' && field !== 'message') {
@@ -97,7 +94,7 @@ const UserInfoCard = (props: UserInfoCardProps) => {
 
     return (
         <>
-            <Container>
+            <div className="p-5 border border-gray-200 rounded-2xl dark:border-gray-800 lg:p-6">
                 <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
                     <div>
                         <h4 className="text-lg font-semibold text-gray-800 dark:text-white/90 lg:mb-6">
@@ -175,7 +172,7 @@ const UserInfoCard = (props: UserInfoCardProps) => {
                         Editar
                     </button>
                 </div>
-            </Container>
+            </div>
             <Modal isOpen={isOpen} onClose={closeModal} className="max-w-[600px] m-4">
                 <div className="no-scrollbar relative w-full max-w-[700px] overflow-y-auto rounded-3xl bg-white p-4 dark:bg-gray-900 lg:p-11">
                     <div className="px-2 pr-14">

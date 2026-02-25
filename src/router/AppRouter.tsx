@@ -10,11 +10,16 @@ const SignIn = lazy(() => import("@/features/auth").then(module => ({ default: m
 const SelectTenant = lazy(() => import("@/features/auth").then(module => ({ default: module.SelectTenant })))
 const Profile = lazy(() => import("@/features/profile").then(module => ({ default: module.Profile })))
 const NotFound = lazy(() => import("@/pages/NotFound"))
+const Category = lazy(() => import("@/features/categories").then(module => ({ default: module.Category })))
+const CategoryDetails = lazy(() => import("@/features/categories").then(module => ({ default: module.CategoryDetails })))
 
 // PAGINAS DE PRUEBA
 import UserProfiles from "../pages/UserProfiles";
 import { Roles } from "@/features/roles";
-// import NotFound from "@/pages/NotFound";
+import BasicTables from "@/pages/Tables/BasicTables";
+import FormElements from "@/pages/Forms/FormElements";
+// import CategoryDetails from "@/features/categories/pages/CategoryDetails";
+
 
 const AppRouter = () => {
     return (
@@ -43,6 +48,18 @@ const AppRouter = () => {
                                 </ProtectedRoutes>
                             } />
 
+                            <Route path="/categories" element={
+                                <ProtectedRoutes>
+                                    <Category />
+                                </ProtectedRoutes>
+                            } />
+
+                            <Route path="/categories/:id/details" element={
+                                <ProtectedRoutes>
+                                    <CategoryDetails />
+                                </ProtectedRoutes>
+                            } />
+
 
                             {/* páginas de prueba*/}
                             <Route path="/prueba/profile" element={
@@ -50,6 +67,12 @@ const AppRouter = () => {
                                     <UserProfiles />
                                 </ProtectedRoutes>
                             } />
+
+                            <Route path="/form-elements" element={<FormElements />} />
+
+
+                            <Route path="/basic-tables" element={<BasicTables />} />
+
 
 
                         </Route>

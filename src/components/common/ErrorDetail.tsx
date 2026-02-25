@@ -1,4 +1,3 @@
-import Container from "@/components/common/Container";
 import Button from "@/components/ui/button/Button";
 import { AlertHexaIcon } from "@/icons";
 
@@ -7,12 +6,12 @@ interface ErrorProfileProps {
     onRetry?: () => void;
 }
 
-const ErrorProfile = ({
-    message = "No pudimos cargar la información del perfil.",
+const ErrorDetail = ({
+    message = "No pudimos cargar la información del recurso.",
     onRetry,
 }: ErrorProfileProps) => {
     return (
-        <Container>
+        <div className="p-5 border border-gray-200 rounded-2xl dark:border-gray-800 lg:p-6">
             <div className="flex flex-col items-center justify-center py-16 text-center space-y-6">
 
                 {/* Icon */}
@@ -37,8 +36,8 @@ const ErrorProfile = ({
                     </Button>
                 )}
             </div>
-        </Container>
+        </div>
     );
 };
 
-export default ErrorProfile;
+export default ErrorDetail;
