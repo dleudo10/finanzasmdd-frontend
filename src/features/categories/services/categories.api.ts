@@ -10,7 +10,7 @@ export const getCategories = async ({params, signal}: ServiceProps): Promise<Api
 export const createCategory = async (payload: CategoryPayload): Promise<ApiResponse<Category>> => {
     const { data } = await api.post<ApiResponse<Category>>("category/", payload)
     return data
-}
+} 
 
 export const categoryById = async (id: string): Promise<ApiResponse<Category>> => {
     const { data } = await api.get<ApiResponse<Category>>(`category/${id}/`)

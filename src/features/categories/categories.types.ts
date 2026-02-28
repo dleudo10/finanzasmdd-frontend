@@ -25,7 +25,7 @@ export type CategoryPayload = {
     is_active: boolean;
 }
 
-// Props del formulario de creación
+// Props del formulario de creación y edicion
 export type CategoryFormProps = {
     instance? : Category;
     closeModal: () => void;

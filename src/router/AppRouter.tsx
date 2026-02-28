@@ -12,12 +12,15 @@ const Profile = lazy(() => import("@/features/profile").then(module => ({ defaul
 const NotFound = lazy(() => import("@/pages/NotFound"))
 const Category = lazy(() => import("@/features/categories").then(module => ({ default: module.Category })))
 const CategoryDetails = lazy(() => import("@/features/categories").then(module => ({ default: module.CategoryDetails })))
+const ListPrice = lazy(() => import("@/features/ListPrice").then(module => ({ default: module.ListPrice })))
+const ListPriceDetail = lazy(() => import("@/features/ListPrice").then(module => ({ default: module.ListPriceDetail })))
 
 // PAGINAS DE PRUEBA
 import UserProfiles from "../pages/UserProfiles";
 import { Roles } from "@/features/roles";
 import BasicTables from "@/pages/Tables/BasicTables";
 import FormElements from "@/pages/Forms/FormElements";
+// import { ListPrice } from "@/features/ListPrice";
 // import CategoryDetails from "@/features/categories/pages/CategoryDetails";
 
 
@@ -57,6 +60,18 @@ const AppRouter = () => {
                             <Route path="/categories/:id/details" element={
                                 <ProtectedRoutes>
                                     <CategoryDetails />
+                                </ProtectedRoutes>
+                            } />
+
+                            <Route path="/list-price" element={
+                                <ProtectedRoutes>
+                                    <ListPrice />
+                                </ProtectedRoutes>
+                            } />
+
+                            <Route path="/list-price/:id/details" element={
+                                <ProtectedRoutes>
+                                    <ListPriceDetail />
                                 </ProtectedRoutes>
                             } />
 

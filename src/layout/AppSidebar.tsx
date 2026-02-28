@@ -70,6 +70,8 @@ const othersItems: NavItem[] = [
             { name: "Valor de inventario", path: "/value-inventory", pro: false },
             { name: "Productos", path: "/products", pro: false },
             { name: "Categorias", path: "/categories", pro: false },
+            { name: "Bodegas", path: "/warehouse", pro: false },
+            { name: "Lista de precios", path: "/list-price", pro: false },
         ]
     },
     {
