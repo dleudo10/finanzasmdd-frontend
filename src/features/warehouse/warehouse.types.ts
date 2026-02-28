@@ -1,23 +1,26 @@
 import { PaginatedResponse } from "@/types/pagination.types";
 
-export type ListPrice = {
+export type Warehouse = {
     id: string;
     name: string;
+    location?: string;
+    observations?: string;
     is_main: boolean;
     is_active: boolean;
     created_at: string;
 }
 
-export type ListPriceResponse = PaginatedResponse<ListPrice>;
+export type WarehouseResponse = PaginatedResponse<Warehouse>;
 
-export type ListPricePayload = {
+export type WarehousePayload = {
     name: string;
+    location?: string;
+    observations?: string;
     is_active: boolean;
 }
 
-// Props del formulario de creación y edicion
-export type ListPriceFormProps = {
-    instance? : ListPrice;
+export type WarehouseFormProps = {
+    instance? : Warehouse;
     closeModal: () => void;
 }
 

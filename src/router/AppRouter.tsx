@@ -14,6 +14,8 @@ const Category = lazy(() => import("@/features/categories").then(module => ({ de
 const CategoryDetails = lazy(() => import("@/features/categories").then(module => ({ default: module.CategoryDetails })))
 const ListPrice = lazy(() => import("@/features/ListPrice").then(module => ({ default: module.ListPrice })))
 const ListPriceDetail = lazy(() => import("@/features/ListPrice").then(module => ({ default: module.ListPriceDetail })))
+const Warehouse = lazy(() => import("@/features/warehouse").then(module => ({ default: module.Warehouse })))
+const WarehouseDetail = lazy(() => import("@/features/warehouse").then(module => ({ default: module.WarehouseDetail })))
 
 // PAGINAS DE PRUEBA
 import UserProfiles from "../pages/UserProfiles";
@@ -72,6 +74,18 @@ const AppRouter = () => {
                             <Route path="/list-price/:id/details" element={
                                 <ProtectedRoutes>
                                     <ListPriceDetail />
+                                </ProtectedRoutes>
+                            } />
+
+                            <Route path="/warehouse" element={
+                                <ProtectedRoutes>
+                                    <Warehouse />
+                                </ProtectedRoutes>
+                            } />
+
+                            <Route path="/warehouse/:id/details" element={
+                                <ProtectedRoutes>
+                                    <WarehouseDetail />
                                 </ProtectedRoutes>
                             } />
 
